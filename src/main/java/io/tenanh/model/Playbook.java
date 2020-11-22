@@ -1,18 +1,11 @@
 package io.tenanh.model;
 
-import java.util.Map;
+import java.util.List;
 
 public class Playbook {
     private Variables vars;
-    private Role role;
 
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
+    private List<Role> roles;
 
     public Variables getVars() {
         return vars;
@@ -20,5 +13,13 @@ public class Playbook {
 
     public void setVars(Variables vars) {
         this.vars = vars;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }

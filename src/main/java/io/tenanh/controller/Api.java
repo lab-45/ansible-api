@@ -1,6 +1,8 @@
 package io.tenanh.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
+
 import io.tenanh.model.Playbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +22,10 @@ public class Api {
 
         ObjectMapper mapper = new ObjectMapper();
         try{
+
+            String yamlString = new YAMLMapper().writeValueAsString(playbook);            
+            log.trace(yamlString);
+
             String jsonString = mapper
                     .writerWithDefaultPrettyPrinter()
                     .writeValueAsString(playbook);
