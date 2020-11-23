@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+/**
+ * Esta clase contiene la definición equivalente a un playbook
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Playbook {
     private Variables vars;
