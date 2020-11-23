@@ -1,11 +1,9 @@
 package io.tenanh.model;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Role {
     private String name;
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Variables vars;
 
     public String getName() {

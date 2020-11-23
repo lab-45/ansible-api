@@ -2,6 +2,9 @@ package io.tenanh.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Playbook {
     private Variables vars;
 

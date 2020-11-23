@@ -17,6 +17,10 @@ public class Api {
 
     Logger log = LoggerFactory.getLogger(Api.class);
 
+    /**
+     * 
+     * @param playbook
+     */
     @PostMapping("/execute")
     public void execute(@RequestBody Playbook playbook) {
 
