@@ -5,16 +5,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.UUID;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component
-public class Workspace {
-    Logger log = LoggerFactory.getLogger(Workspace.class);
+import lombok.extern.slf4j.Slf4j;
 
-    public String createPath(String path) {
+@Component
+@Slf4j
+public class Workspace {
+
+    public String createRandomPath(String path) {
         log.debug("Generating GUID");
 
         UUID uuid = UUID.randomUUID();
